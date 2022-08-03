@@ -18,6 +18,20 @@ const Employee = require('../models/Employee');
 //     })
 // }
 // get record with pagination
+
+const index = (req,res,next)=>{
+        Employee.find()
+        .then(response=>{
+            res.json({
+                response
+            })
+        })
+        .catch(error=>{
+            res.json({
+                message: 'Error Ocured'
+            })
+        })
+    }
 const index = (req,res,next)=>{
     if(req.query.page && req.query.limit){
         Employee.paginate({},{page:req.query.page,limit:req.query.limit})
