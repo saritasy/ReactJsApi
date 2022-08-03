@@ -4,19 +4,19 @@ const Employee = require('../models/Employee');
 
 
 // Show the list of employee
-// const index = (req,res,next)=>{
-//     Employee.find()
-//     .then(response=>{
-//         res.json({
-//             response
-//         })
-//     })
-//     .catch(error=>{
-//         res.json({
-//             message: 'Error Ocured'
-//         })
-//     })
-// }
+const index = (req,res,next)=>{
+    Employee.find()
+    .then(response=>{
+        res.json({
+            response
+        })
+    })
+    .catch(error=>{
+        res.json({
+            message: 'Error Ocured'
+        })
+    })
+}
 // get record with pagination
 
 const index = (req,res,next)=>{
